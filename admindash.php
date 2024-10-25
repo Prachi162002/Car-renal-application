@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMINISTRATOR</title>
+    <title>RENT N ROLL - ADMINISTRATOR</title>
 </head>
 <body>
 <style>
@@ -184,7 +184,7 @@ $num=mysqli_num_rows($queryy);
             
           
         </div>
-        <div>
+         <div>
             <h1 class="header">FEEDBACKS</h1>
             <div>
                 <div>
@@ -196,7 +196,7 @@ $num=mysqli_num_rows($queryy);
                         <th>COMMENT</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody> 
                 <?php
                 
                 
@@ -214,7 +214,7 @@ $num=mysqli_num_rows($queryy);
                 </table>
                 </div>
             </div>
-        </div>
+        </div> -->
      
 </body>
 </html>

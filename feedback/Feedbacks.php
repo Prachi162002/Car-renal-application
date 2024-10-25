@@ -1,8 +1,7 @@
 <!doctype html>
 	<html>
 		<head>
-  		  <title>
-		    Home</title>
+  		  <title>RENT N ROLL - FEEDBACK</title>
 		  <link rel="stylesheet" href="css/bootstrap.min.css">
 		  <script src="js/bootstrap.min.js"></script>
 		  <script src="js/jquery-3.3.1.min.js"></script>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMINISTRATOR</title>
+    <title>RENT N ROLL - ADMINISTRATOR</title>
 </head>
 <body>
 <style>
@@ -164,8 +164,8 @@ input#name{
             
             <label>Price : </label>
             <br>
-            <input type="number" name="price" min="1"
-            id="name" placeholder="Enter Price Of Car for One Day(in rupees)" required>
+            <input  name="price" min="1"
+            id="name" placeholder="Enter Price Of Car for per kilometer(in rupees)" required>
             <br><br>
 
             <label>Car Image : </label>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMINISTRATOR</title>
+    <title>RENT N ROLL - ADMINISTRATOR</title>
 </head>
 <body>
 <style>
@@ -196,7 +196,6 @@ $num=mysqli_num_rows($queryy);
                     <li><a href="adminvehicle.php">VEHICLE MANAGEMENT</a></li>
                     <li><a href="adminusers.php">USERS</a></li>
                     <li><a href="admindash.php">FEEDBACKS</a></li>
-                    
                     <li><a href="adminbook.php">BOOKING REQUEST</a></li>
                   <li> <button class="nn"><a href="index.php">LOGOUT</a></button></li>
                 </ul>
@@ -251,9 +250,9 @@ $num=mysqli_num_rows($queryy);
                     
                     ?></php></td>
                     <td><button type="submit" class="but" name="approve"><a href="deletecar.php?id=<?php echo $res['CAR_ID']?>">DELETE CAR</a></button></td>
-    
+        
                 </tr>
-               <?php } ?>
+               <?php } ?> 
                 </tbody>
                 </table>
                 

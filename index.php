@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     
-    <title>CAR RENTAL</title>
+    <title>RENT N ROLL</title>
     <script type="text/javascript">
         window.history.forward();
         function noBack() {
@@ -81,12 +81,10 @@ require_once('connection.php');
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="index.php">HOME</a></li>
                     <li><a href="aboutus.html">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    
                     <li><a href="contactus.html">CONTACT</a></li>
-                  <li> <button class="adminbtn"><a href="adminlogin.php">ADMIN LOGIN</a></button></li>
+                  <li><button class="adminbtn"><a href="adminlogin.php">ADMIN LOGIN</a></button></li>
                 </ul>
             </div>
             
@@ -97,7 +95,6 @@ require_once('connection.php');
             <p class="par">Live the life of Luxury.<br>
                 Just rent a car of your wish from our vast collection.<br>Enjoy every moment with your family<br>
                  Join us to make this family vast.  </p>
-            <button class="cn"><a href="register.php">JOIN US</a></button>
             <div class="form">
                 <h2>Login Here</h2>
                 <form method="POST"> 
@@ -107,16 +104,8 @@ require_once('connection.php');
                 </form>
                 <p class="link">Don't have an account?<br>
                 <a href="register.php">Sign up</a> here</a></p>
-                <!-- <p class="liw">or<br>Log in with</p>
-                <div class="icon">
-                    &emsp;&emsp;&emsp;&ensp;<a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon> </a>&nbsp;&nbsp;
-                    <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon> </a>&ensp;
-                    <a href="https://myaccount.google.com/"><ion-icon name="logo-google"></ion-icon> </a>&ensp;
-                    
-                </div> -->
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>

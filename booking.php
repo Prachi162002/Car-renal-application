@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAR BOOKING</title>
-    <!-- <link  rel="stylesheet" href=""> -->
     <script type="text/javascript">
         function preventBack() {
             window.history.forward(); 
@@ -236,7 +235,7 @@ ul li a:hover{
     require_once('connection.php');
     session_start();
  
-    $carid=$_GET['id'];
+     $carid=$_GET['id'];
     
     $sql="select *from cars where CAR_ID='$carid'";
     $cname = mysqli_query($con,$sql);
@@ -297,7 +296,6 @@ ul li a:hover{
                     <ul>
                         <li ><a href="cardetails.php">HOME</a></li>
                         <li><a href="aboutus2.html">ABOUT</a></li>
-                        <li><a href="#">DESIGN</a></li>
                         <li><a href="contactus2.html">CONTACT</a></li>
                         <li><button class="nn"><a href="index.html">LOGOUT</a></button></li>
                         <li><img src="images/profile.png" class="circle" alt="Alps"></li>
@@ -315,7 +313,7 @@ ul li a:hover{
         <div class="register">
             <h2>BOOKING</h2>
         <form id="register" method="POST"  >
-            <h2>CAR NAME : <?php echo "".$email['CAR_NAME']?></h2>
+            <h2>CAR NAME : <?php echo "".$email['CAR_NAME']?></h2> 
             <label>BOOKING PLACE : </label>
             <br>
             <input type="text" name="place"
@@ -324,9 +322,12 @@ ul li a:hover{
 
             <label>BOOKING DATE : </label>
             <br>
-            <input type ="date" name="date"
-            id="datefield" min='1899-01-01' max='2000-13-13'  placeholder="ENTER THE DATE FOR BOOKING">
+            <input type ="date" name="rdate"
+            id="dfield"  min='1899-01-01' placeholder="Enter The Return Date">
             <br><br>
+            <!-- <input type ="date" name="date"
+            id="datefield" min='1899-01-01' max='2000-13-13'  placeholder="ENTER THE DATE FOR BOOKING">
+            <br><br> -->
 
             <label>DURATION : </label>
             <br>
@@ -351,6 +352,11 @@ ul li a:hover{
             <input type ="date" name="rdate"
             id="dfield"  min='1899-01-01' placeholder="Enter The Return Date">
             <br><br>
+            <label> Sumbit driving licence </label>
+            <br>
+            <input type="file" name="image" required>
+           <br><br>
+           <p>Note: You have to pick the car from our address!</p>
             <input type="submit"  class="btnn" value="BOOK" name="book" >
             
         </form>

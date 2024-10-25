@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN LOGIN</title>
+    <title>RENT N ROLL - ADMIN LOGIN</title> -->
     <!-- <link rel="stylesheet" href="css/adlog.css">     -->
-    <script type="text/javascript">
+     <script type="text/javascript">
         function preventBack() {
             window.history.forward(); 
         }
@@ -16,8 +16,8 @@
         window.onunload = function () { null };
     </script>
 </head>
-<body>
-<style>
+<body> 
+ <style>
 
 body{
     width: 90%;
@@ -152,9 +152,9 @@ body{
     color: black;
     font-weight: bold;
 }
-</style>
+</style> 
 
-<?php
+ <?php
     require_once('connection.php');
     if(isset($_POST['adlog'])){
         $id=$_POST['adid'];
@@ -177,7 +177,7 @@ body{
                     // session_start();
                     // $_SESSION['email'] = $email;
                     echo '<script>alert("Welcome ADMINISTRATOR!");</script>';
-                    header("location: admindash.php");
+                    header("location: adminusers.php");
                     
                 }
                 else{
@@ -209,11 +209,11 @@ body{
 
 
 ?>
+ 
 
 
 
-
-<button class="back"><a href="index.php">Go To Home</a></button>
+ <button class="back"><a href="index.php">Go To Home</a></button>
     <div class="helloadmin">
     <h1>HELLO ADMIN!</h1></div>
 

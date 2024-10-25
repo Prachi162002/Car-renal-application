@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     
-    <title>REGISTRATION</title>
+    <title>RENT N ROLL - USER REGISTRATION</title>
    <link rel="stylesheet" href="css/regs.css" type="text/css">
 </head>
 <body>
@@ -24,7 +24,7 @@ if(isset($_POST['regs']))
     $Pass=md5($pass);
     if(empty($fname)|| empty($lname)|| empty($email)|| empty($lic)|| empty($ph)|| empty($pass) || empty($gender))
     {
-        echo '<script>alert("please fill the place")</script>';
+       echo '<script>alert("please fill the place")</script>';
     }
     else{
         if($pass==$cpass){
@@ -40,23 +40,23 @@ if(isset($_POST['regs']))
         $result = mysqli_query($con,$sql);
           
 
-          // $to_email = $email;
-          // $subject = "NO-REPLY";
-          // $body = "THIS MAIL CONTAINS YOUR AUTHENTICATION DETAILS....\nYour Password is $pass and Your Registered email is $to_email"
-          //          ;
-          // $headers = "From: sender email";
+           $to_email = $email;
+           $subject = "NO-REPLY";
+           $body = "THIS MAIL CONTAINS YOUR AUTHENTICATION DETAILS....\nYour Password is $pass and Your Registered email is $to_email"
+                    ;
+           $headers = "From: sender email";
           
-          // if (mail($to_email, $subject, $body, $headers))
+           if (mail($to_email, $subject, $body, $headers))
           
-          // {
-          //     echo "Email successfully sent to $to_email...";
-          // }
+           {
+               echo "Email successfully sent to $to_email...";
+           }
           
-          // else
+           else
  
-          // {
-          // echo "Email sending failed!";
-          // }
+           {
+           echo "Email sending failed!";
+           }
         if($result){
             echo '<script>alert("Registration Successful Press ok to login")</script>';
             echo '<script> window.location.href = "index.php";</script>';       
@@ -83,8 +83,8 @@ if(isset($_POST['regs']))
   <style>
       body{
         background:  #fdcd3b;
-        background-size: auto;
-         background-position:unset;
+        background-size: cover;
+        background-position: center;
          /* background-repeat: ; */
       }
       input#psw{
@@ -172,14 +172,14 @@ input#cpsw{
             
             <label>Your License number : </label>
             <br>
-            <input type="text" name="lic"
+            <input type="text" name="lic" pattern="[A-Z0-9]{15}$"
             id="name" placeholder="Enter Your License number" required>
             <br><br>
 
             <label>Phone Number : </label>
             <br>
             <input type="tel" name="ph" maxlength="10" onkeypress="return onlyNumberKey(event)"
-            id="name" placeholder="Enter Your Phone Number" required>
+            id="name" placeholder="Enter Your Phone Number" pattern="[0-9]{10}$" required>
             <br><br>
 
             
@@ -206,8 +206,7 @@ input#cpsw{
                 </td>
             </tr>
             <br><br>
-
-            <input type="submit" class="btnn"  value="REGISTER" name="regs" style="background-color: #ff7200;color: white">
+            <input type="submit" class="btnn"  value="REGISTER" name="regs" onclick="validateForm()">
             
         
         
@@ -289,6 +288,25 @@ myInput.onkeyup = function() {
         var ASCIICode = (evt.which) ? evt.which : evt.keyCode
         if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
             return false;
+        return true;
+    }
+
+    function validateForm() {
+        var phone = document.forms["myForm"]["ph"].value;
+        var license = document.forms["myForm"]["lic"].value;
+        var phonePattern = /^[7-9]{3}[0-9]{7}$/; // Phone number pattern
+        var licensePattern = /^[A-Z0-9]{15}$/; // License number pattern
+
+        if (!phonePattern.test(phone)) {
+            alert("Invalid phone number");
+            return false;
+        }
+
+        if (!licensePattern.test(license)) {
+            alert("Invalid license number");
+            return false;
+        }
+
         return true;
     }
 </script>

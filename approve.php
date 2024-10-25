@@ -25,22 +25,6 @@ else{
     $query2=mysqli_query($con,$sql2);
     
     echo '<script>alert("APPROVED SUCCESSFULLY")</script>';
-    // $to_email = $email;
-    // $subject = "DONOT-REPLY";
-    // $body = "YOUR BOOKING FOR THE CAR $carname IS BEEN APPROVED WITH BOOKING ID : $bookid";
-    // $headers = "From: sender email";
-    
-    // if (mail($to_email, $subject, $body, $headers))
-    
-    // {
-    //     echo "Email successfully sent to $to_email...";
-    // }
-    
-    // else
-
-    // {
-    // echo "Email sending failed!";
-    // }
     echo '<script> window.location.href = "adminbook.php";</script>';
 }  
 }

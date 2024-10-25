@@ -5,11 +5,4 @@
     {
         echo 'please check your Database connection';
     }
-
-
-
-
-
-
-
 ?>

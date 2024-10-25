@@ -10,7 +10,7 @@
     />
     <script src="main.js"></script>
     <link rel="stylesheet" href="css/pay.css" />
-    <title>Payment Form</title>
+    <title>RENT N ROLL - Payment Form</title>
     <script type="text/javascript">
         function preventBack() {
             window.history.forward(); 

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Details</title>
+    <title>RENT N ROLL - CAR DETAILS</title>
     
 </head>
 
@@ -22,15 +22,6 @@ body{
     background-position: center;
     background-size: cover;
 }
-/* .main{
-   
-    width: 100%;
-     background: linear-gradient(to top, rgba(0,0,0,0)50%, rgba(0,0,0,0)50%);
-    background-position: center;
-    background-size: cover;
-    height: 109vh; 
-    animation: infiniteScrollBg 50s linear infinite;
-} */
 .navbar{
     width: 1200px;
     height: 75px;
@@ -169,8 +160,6 @@ ul li a:hover{
 
 .nn{
     width:100px;
-    /* background: #ff7200; */
-    border:none;
     height: 40px;
     font-size: 18px;
     border-radius: 10px;
@@ -226,9 +215,8 @@ ul li a:hover{
     $name = mysqli_query($con,$sql);
     $rows=mysqli_fetch_assoc($name);
     $sql2="select *from cars where AVAILABLE='Y'";
-    $cars= mysqli_query($con,$sql2);
+    $cars= mysqli_query($con,$sql2);  
     
-    // $row=mysqli_fetch_assoc($cars);
     
     
     ?>
@@ -248,12 +236,12 @@ ul li a:hover{
             <div class="menu">
                
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="cardetails.php">HOME</a></li>
                     <li><a href="aboutus2.html">ABOUT</a></li>
                     
                     <li><a href="contactus2.html">CONTACT</a></li>
                     <li><a href="feedback/Feedbacks.php">FEEDBACK</a></li>
-                    <li><button class="nn"><a href="index.php">LOGOUT</a></button></li>
+                    <li><a href="index.php">LOGOUT</a></li>
                     <li><img src="images/profile.png" class="circle" alt="Alps"></li>
                     <li><p class="phello">HELLO! &nbsp;<a id="pname"><?php echo $rows['FNAME']." ".$rows['LNAME']?></a></p></li>
                     <li><a id="stat" href="bookinstatus.php">BOOKING STATUS</a></li>
@@ -268,10 +256,9 @@ ul li a:hover{
     <?php
         while($result= mysqli_fetch_array($cars))
         {
-            // echo $result['CAR_ID'];
-            // echo $result['AVAILABLE'];
+           
             
-    ?>    
+    ?>     
     
     <li>
     <form method="POST">
@@ -285,7 +272,7 @@ ul li a:hover{
             <h2>Fuel Type : <a><?php echo $result['FUEL_TYPE']?></a> </h2>
             <h2>CAPACITY : <a><?php echo $result['CAPACITY']?></a> </h2>
             <h2>Rent Per Day : <a>₹<?php echo $result['PRICE']?>/-</a></h2>
-            <button type="submit"  name="booknow" class="utton" style="margin-top: 5px;"><a href="booking.php?id=<?php echo $res;?>">book</a></button>
+            <button type="submit"  name="booknow" class="button" style="margin-top: 5px;"><a href="booking.php?id=<?php echo $res;?>">book</a></button>
         </div>
     </div></form></li>
     <?php
@@ -301,58 +288,11 @@ ul li a:hover{
     $sql="select * from users where EMAIL='$value'";
     $name = mysqli_query($con,$sql);
     $rows=mysqli_fetch_assoc($name);
-    // // $sql2="select *from cars where CAR_ID=1";
-    // $cars= mysqli_query($con,"select *from cars where CAR_ID=1");
-    
-    // $row=mysqli_fetch_assoc($cars);
-    
-        
-        
-    
     
     ?>
-
-
-    
-
-
-    <!-- <li>
-        <div class="box">
-           <div class="imgBx">
-                <img src="images/lamborghini.webp">
-            </div>
-            <div class="content">
-                <h2>LAMBORGHINI</h2>
-                <p>It has a stuning look and its in good condition.</p>
-                <h1><a>₹15,000/-</a></h1>
-                <button class="button" ><a href="booking.html">BOOK NOW</a></button>
-            </div>
-        </div></li>
-        <li>
-            <div class="box">
-               <div class="imgBx">
-                    <img src="images/porsche.jpg ">
-                </div>
-                <div class="content">
-                    <h2>PORSCHE</h2>
-                    <p>It is a cheap and best car for the family trips. <br>
-                    </p>
-                    <h1><a>₹10,000/-</a></h1>
-                    <button class="button" ><a href="booking.html">BOOK NOW</a></button>
-                </div>
-            </div></li> -->
-            
-                
-           
     </ul>
     </div>
   </div>
-  </div>
-    
-    
-
- 
-    
-     
+  </div>    
 </body>
 </html>
